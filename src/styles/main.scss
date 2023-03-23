@@ -1,7 +1,21 @@
 @import "utils";
 @import "fonts";
 @import "typography";
+@import "reset";
+@import "normalize";
 
-body {
-  background: $c-gray;
-}
+@import "./blocks/featured-spots.scss";
+@import "./blocks/gallery.scss";
+@import "./blocks/above-sea.scss";
+@import "./blocks/button.scss";
+@import "./blocks/editors-pick.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/subscribe.scss";
+@import "./blocks/from.scss";
+@import "./blocks/mountains.scss";
+@import "./blocks/header.scss";
+@import "./blocks/menu.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/scroll-buttons.scss";
+@import "./blocks/swiper.scss";
+

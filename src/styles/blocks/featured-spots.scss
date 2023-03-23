@@ -1,0 +1,101 @@
+.featured-spots {
+  display: flex;
+  justify-content: center;
+}
+
+.featured-spots-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  width: 100%;
+
+  @include onTablet {
+    flex-direction: column;
+  }
+
+  @include onDesktop {
+    flex-direction: row;
+    flex-direction: row;
+    padding-top: 110px;
+    max-width: 1200px;
+  }
+}
+
+.featured-spots-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+
+  @include onTablet {
+    width: 100%;
+  }
+
+  @include onDesktop {
+    width: 300px;
+    padding-right: 85px;
+    padding-left: 20px;
+  }
+
+  &__title {
+    margin-top: 4px;
+    text-align: right;
+
+    font-size: 24px;
+    line-height: 1.4;
+
+    @include onTablet {
+      text-align: center;
+      font-size: 35px;
+    }
+
+    @include onDesktop {
+      text-align: right;
+      font-size: 24px;
+    }
+  }
+
+  &__description {
+    margin-top: 15px;
+    text-align: center;
+
+    font-size: 12px;
+    line-height: 2;
+
+
+    @include onTablet {
+      text-align: center;
+    }
+
+    @include onDesktop {
+      text-align: right;
+    }
+  }
+
+  &__view-all {
+    display: none;
+    margin-top: 110px;
+    text-align: right;
+
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    @include onTablet {
+      display: none;
+    }
+
+    @include onDesktop {
+      display: block;
+    }
+
+    &::before {
+      display: inline-block;
+      margin-right: 12px;
+      content: "";
+      width: 88px;
+      border-bottom: 3px solid #fff;
+    }
+  }
+}

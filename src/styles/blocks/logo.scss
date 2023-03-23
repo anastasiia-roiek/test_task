@@ -1,0 +1,22 @@
+.logo {
+  height: 22px;
+}
+
+.logo-block {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+
+  height: 90px;
+  width: 344px;
+  background-color: $yellow;
+
+  @include onTablet {
+    padding-left: 30px;
+  }
+
+  @include onDesktop {
+    padding-left: 55px;
+    min-width: 255px;
+  }
+}

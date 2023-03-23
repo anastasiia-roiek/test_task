@@ -1,0 +1,157 @@
+.above-sea {
+  width: 100%;
+
+  &__container {
+  margin-top: 50px;
+
+    @include onTablet {
+      margin-top: 80px;
+    }
+
+    @include onDesktop {
+      margin-top: 135px;
+    }
+  }
+}
+
+.above-sea-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+
+  @include onTablet {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  @include onDesktop {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__photo {
+    display: block;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.04);
+    }
+
+    @include onTablet {
+      max-width: 350px;
+      max-height: 350px;
+      width: 100%;
+      height: auto;
+      margin: 0;
+    }
+
+    @include onDesktop {
+      max-width: 570px;
+      max-height: 570px;
+      width: 100%;
+      height: auto;
+      margin: 0;
+    }
+  }
+}
+
+.sea-content {
+  position: relative;
+  padding: 0;
+  width: 100%;
+
+  @include onTablet {
+    padding-left: 40px;
+  }
+
+  @include onDesktop {
+    padding-left: 110px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    margin-top: 50px;
+
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 700;
+
+    text-align: center;
+
+    @include onTablet {
+      margin-top: 0;
+      text-align: left;
+      font-size: 40px;
+    }
+
+    @include onDesktop {
+      margin-top: 0;
+      text-align: left;
+      font-size: 52px;
+    }
+  }
+
+  &__quote {
+    position: relative;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    padding: 0 30px;
+    display: inline-block;
+
+    font-size: 15px;
+    font-style: italic;
+    line-height: 2;
+    font-weight: 500;
+
+    @include onTablet {
+      padding: 0;
+    }
+
+    @include onDesktop {
+      padding: 0;
+    }
+
+    &::before {
+      position: absolute;
+      left: -10px;
+      content: "\0022";
+
+      @include onDesktop {
+        left: -15px;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      right: -50px;
+      content: "\0022";
+      padding: 0 40px;
+    }
+  }
+
+  &__text {
+    width: 100%;
+    margin-bottom: 54px;
+    padding: 0 30px;
+
+    font-size: 12px;
+
+    @include onTablet {
+      width: 100%;
+      padding: 0;
+    }
+
+    @include onDesktop {
+      width: 310px;
+      padding: 0;
+    }
+  }
+}

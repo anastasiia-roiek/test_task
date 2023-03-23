@@ -1,6 +1,27 @@
-@mixin hover($_property, $_toValue) {
-  transition: #{$_property} 0.3s;
-  &:hover {
-    #{$_property}: $_toValue;
+@mixin onTablet {
+  @media (min-width: 640px) {
+    @content;
   }
+}
+
+@mixin onDesktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin slider-button ($size) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: $size;
+  width: $size;
+
+  border: 2px solid #28272a;
+  border-radius: 20px;
+
+  background-color: #fff;
+  cursor: pointer;
+
 }
